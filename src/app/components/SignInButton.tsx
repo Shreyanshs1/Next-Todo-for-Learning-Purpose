@@ -6,6 +6,8 @@ export async function SignInButton() {
   const session = await auth()
 
   if (session?.user) {
+    console.log(session.user)
+    console.log("Session:", session)
     return (
       <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
         <p>{session.user.name}</p>

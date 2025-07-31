@@ -17,7 +17,7 @@ export async function SignInButton() {
             await signOut()
           }}
         >
-          <button type="submit" className="bg-red-500 text-white font-bold py-2 px-4 rounded">Sign Out</button>
+          <button type="submit" className="cursor-pointer bg-red-500 text-white font-bold py-2 px-4 rounded">Sign Out</button>
         </form>
       </div>
     )
@@ -30,7 +30,7 @@ export async function SignInButton() {
         await signIn("github")
       }}
     >
-      <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded">Sign in with GitHub</button>
+      <button type="submit" className="cursor-pointer bg-blue-500 text-white font-bold py-2 px-4 rounded">Sign in with GitHub</button>
     </form>
   )
 }

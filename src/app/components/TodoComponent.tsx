@@ -59,7 +59,7 @@ export default function TodoComponent({ userId }: { userId: string }) {
           placeholder="New todo"
           className="flex-1 border rounded px-2 py-1"
         />
-        <button type="submit" className="bg-blue-500 text-white px-4 rounded">
+        <button type="submit" className="cursor-pointer bg-blue-500 text-white px-4 rounded">
           Add
         </button>
       </form>
@@ -80,7 +80,7 @@ export default function TodoComponent({ userId }: { userId: string }) {
             </span>
             <button
               onClick={() => deleteTodo(todo.id)}
-              className="text-red-500 font-bold ml-2"
+              className="cursor-pointer text-red-500 font-bold ml-2"
             >
               ✕
             </button>

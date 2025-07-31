@@ -10,7 +10,7 @@ export async function SignInButton() {
     console.log("Session:", session)
     return (
       <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
-        <p>{session.user.name}</p>
+        <p className="font-bold text-2xl">{session.user.name}</p>
         <form
           action={async () => {
             "use server"

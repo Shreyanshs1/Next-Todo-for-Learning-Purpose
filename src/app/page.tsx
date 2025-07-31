@@ -1,10 +1,16 @@
-import { SignInButton } from "./components/SignInButton";
+// src/app/page.tsx
 
-export default function Home() {
+import { SignInButton } from "@/src/app/components/SignInButton";
+import { auth } from "@/auth";
+import TodoComponent from "@/src/app/components/TodoComponent";
+
+export default async function Home() {
+  const session = await auth();
+
   return (
-    <div>
-      <h1>Hello</h1>
+    <main className="max-w-xl mx-auto mt-10 p-4">
       <SignInButton />
-    </div>
+      {session?.user?.id && <TodoComponent userId={session.user.id} />}
+    </main>
   );
 }
